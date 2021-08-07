@@ -1,0 +1,43 @@
+package Paquetededatos;
+
+public class Masajista extends Integranteseleccion{
+    private String titulacion;
+    private Integer añosexperiencia;
+    
+    public Masajista (){
+        super();
+    }
+    public Masajista (Integer id, String nombres, String apellidos, Integer edad, String titulacion, Integer añosexperiencia){
+        super(id,nombres,apellidos,edad);
+        this.añosexperiencia = añosexperiencia;
+        this.titulacion = titulacion;
+    }
+    
+    public void darmasaje (){
+        System.out.println("Dando Masaje");
+    }
+    
+    public void concentrarse(){
+        System.out.println("Concentrandose");
+    }
+    
+    public void viajar (){
+        System.out.println("Viajando");
+    }
+
+    public String getTitulacion() {
+        return titulacion;
+    }
+
+    public void setTitulacion(String titulacion) {
+        this.titulacion = titulacion;
+    }
+
+    public Integer getAñosexperiencia() {
+        return añosexperiencia;
+    }
+
+    public void setAñosexperiencia(Integer añosexperiencia) {
+        this.añosexperiencia = añosexperiencia;
+    }
+}

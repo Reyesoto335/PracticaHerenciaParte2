@@ -1,0 +1,38 @@
+package Paquetededatos;
+
+public class Entrenador extends Integranteseleccion{
+    private Integer idFederacion;
+    
+    public Entrenador (){
+        super();
+    }
+    
+    public Entrenador (Integer id, String nombres, String apellidos, Integer edad, Integer idFederacion){
+        super(id,nombres,apellidos,edad);
+        this.idFederacion = idFederacion;
+    }
+    
+    public void jugarpartido(){
+        System.out.println("Diriguiendo Partido");
+    }
+    
+    public void entrenar (){
+        System.out.println("Diriguiendo Partido");
+    }
+    
+    public void concentrarse (){
+        System.out.println("Concentrandose");
+    }
+    
+    public void viajar (){
+        System.out.println("Viajando");
+    }
+
+    public Integer getIdFederacion() {
+        return idFederacion;
+    }
+
+    public void setIdFederacion(Integer idFederacion) {
+        this.idFederacion = idFederacion;
+    }
+}

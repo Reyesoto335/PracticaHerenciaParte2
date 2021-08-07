@@ -1,0 +1,73 @@
+import Paquetededatos.Entrenador;
+import Paquetededatos.Futbolista;
+import Paquetededatos.Integranteseleccion;
+import Paquetededatos.Masajista;
+
+
+public class PracticaHerencia {
+
+    public static void main(String[] args) {
+        Integranteseleccion integrantes [] = new Integranteseleccion [3];
+        Futbolista jugadores = new Futbolista();
+        Entrenador entrenador = new Entrenador ();
+        Masajista masajista = new Masajista();
+        
+        
+        
+        Entrenador guardiola = new Entrenador(1,"Pep","Guardiola",45,23);
+        Futbolista messi = new Futbolista(2,"Liones","Messi",34,10,"Delantero");
+        Masajista raul = new Masajista (3,"Raul","Montero",25,"Masajista Profesional",5);
+        
+        integrantes[0] = guardiola;
+        integrantes[1] = messi;
+        integrantes[2] = raul;
+
+        System.out.println("**************************************************************");
+        System.out.println("Primera fase \t Concentración");
+        System.out.println("*******************************************************************");
+        
+        for (int i = 0; i < integrantes.length; i++) {
+            System.out.println(integrantes[i].getNombres() + "\t" + integrantes[i].getApellidos() + " =>\t");
+            jugadores.concentrarse();
+        }
+        
+        System.out.println("***************************************************************");
+        System.out.println("Segunda Fase \t viajar");
+        System.out.println("*******************************************************************");
+        
+        for (int i = 0; i < integrantes.length; i++) {
+            System.out.println(integrantes[i].getNombres() + "\t" + integrantes[i].getApellidos() + " =>\t");
+            jugadores.viajar();
+        }
+        
+        System.out.println("****************************************************************");
+        System.out.println("Tercera Fase \t Entrenar");
+        System.out.println("*******************************************************************");
+        
+        System.out.println(integrantes[0].getNombres() + integrantes[0].getApellidos() + " =>\t");
+        entrenador.entrenar();
+        System.out.println(integrantes[1].getNombres() + integrantes[1].getApellidos() + " =>\t");
+        jugadores.entrenar();
+        
+        System.out.println("******************************************************************");
+        System.out.println("Cuarta Fase \t Jugando Partido");
+        System.out.println("*******************************************************************");
+        
+        System.out.println(integrantes[0].getNombres() + integrantes[0].getApellidos() + " =>\t");
+        entrenador.jugarpartido();
+        System.out.println(integrantes[1].getNombres() + integrantes[1].getApellidos() + " =>\t");
+        jugadores.jugarpartido();
+        
+        System.out.println("*******************************************************************");
+        System.out.println("Quinta Fase \t Descanso");
+        System.out.println("*******************************************************************");
+        
+        for (int i = 0; i < integrantes.length -1; i++) {
+            System.out.println(integrantes[i].getNombres() + "\t" + integrantes[i].getApellidos() + " =>\t");
+            jugadores.concentrarse();
+        }
+        System.out.println(integrantes[2].getNombres() + integrantes[2].getApellidos());
+        masajista.darmasaje();
+    }
+    
+}
